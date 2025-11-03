@@ -1,0 +1,37 @@
+.start-screen{
+    background-color: #404040;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-image: url(./../../assets/img/background.jpg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+    h1{
+        color: white;
+
+    }
+    .startBtn{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;       
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 40px;
+        &:hover{
+            cursor: pointer;
+            
+            filter: brightness(1.2)
+        }
+    }
+        
+    
+   
+}

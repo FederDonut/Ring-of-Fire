@@ -1,0 +1,29 @@
+.field{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-image: url(./../../assets/img/board.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card-Stack{
+        position: relative;
+        div{
+            position: absolute;
+            height: 150px;
+            width: 100px;
+        }
+        
+
+        .card-content{
+            background-image: url(./../../assets/img/cards/card_cover.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+    
+}
