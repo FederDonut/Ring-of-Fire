@@ -2,8 +2,9 @@
 
     <div class="card-Stack">
         
-        <div [ngStyle]="{'right.px':i * 5}" *ngFor="let c of [0,1,2,3,4,5]; let i = index;" class="card card-content"></div>
-       
+        <div [ngStyle]="{'right.px':i * 5}" *ngFor="let c of [0,1,2,3,4]; let i = index;" class="card card-cover"></div>
+        <div (click)="takeCard()"  style="right: 30px;" class="card card-cover top-card"></div>
+        <div (click)="takeCard()" *ngIf="pickCardAnimation"  style="right: 30px;" class="card card-content pick-card"></div>
     </div>
 
 </div>
