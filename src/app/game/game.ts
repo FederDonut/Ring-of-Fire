@@ -12,7 +12,9 @@ import { GameData } from '../../models/gameData';
 })
 export class Game implements OnInit{
     pickCardAnimation = false;
+    currentCard: string | undefined= "";
     game!: GameData; //game! = Non-Null Assertion Operator 
+    imgPath: string = "./../../assets/img/cards/" 
 
     ngOnInit(): void{
       this.newGame();
@@ -25,6 +27,8 @@ export class Game implements OnInit{
     }
 
     takeCard(){
+      this.currentCard = this.game.stack.pop()
+      console.log(this.currentCard)
       this.pickCardAnimation = true;
     }
 }

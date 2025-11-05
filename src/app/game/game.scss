@@ -1,3 +1,5 @@
+
+
 .field{
     width: 100vw;
     height: 100vh;
@@ -26,7 +28,8 @@
         }
 
         .card-content{
-            background-image: url(./../../assets/img/cards/ace_1.png);
+            /**background-image: url(./../../assets/img/cards/ace_1.png);**/
+            background-image: var(--bg-image);
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
