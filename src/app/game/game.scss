@@ -4,7 +4,7 @@
     width: 100vw;
     height: 100vh;
     max-width: 100%;
-    background-image: url(./../../assets/img/board.jpg);
+    background-image: url(./../../../public/assets/img/board.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -21,7 +21,7 @@
         
 
         .card-cover{
-            background-image: url(./../../assets/img/cards/card_cover.png);
+            background-image: url(./../../../public/assets/img/cards/card_cover.png);
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;

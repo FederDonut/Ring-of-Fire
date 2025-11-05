@@ -2,12 +2,12 @@
 
     <div class="card-Stack">
         
-        <!--<img src="/src/assets/img/cards/ace_10.png" alt="">--> 
+        <!--<img src="./../../assets/img/cards/ace_13.png" alt="">-->
         <div [ngStyle]="{'right.px':i * 5}" *ngFor="let c of [0,1,2,3,4]; let i = index;" class="card card-cover"></div>
         <div (click)="takeCard()"  style="right: 30px;" class="card card-cover top-card"></div>
         <div (click)="takeCard()" 
             *ngIf="pickCardAnimation"  style="right: 30px;" class="card card-content pick-card" 
-            [style.--bg-image]="'url(src/assets/img/cards/'+currentCard+'.png)'"
+            [style.--bg-image]="'url(./assets/img/cards/'+currentCard+'.png)'"
             >
         </div>
 
@@ -15,4 +15,4 @@
     </div>
 
 </div>
-src/assets/img/cards/ace_2.png
+public
