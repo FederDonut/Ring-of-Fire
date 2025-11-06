@@ -1,8 +1,8 @@
 export class GameData {
 
-    public players: string[] = [];
+    public players: string[]= ['Hans','Peter','Fredy'];
     public stack: string[] =[];
-    public playCard: string[] =[];
+    public playedCards: string[]=[];
     public currentPlayer: number = 0;
 
     constructor(){
