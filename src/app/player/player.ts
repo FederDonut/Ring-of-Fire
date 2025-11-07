@@ -10,6 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class Player implements OnInit{
 
   @Input() name!:string;
+  @Input() playerActive:boolean = false;
 
 
   ngOnInit(): void {

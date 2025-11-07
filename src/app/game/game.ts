@@ -11,6 +11,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { DialogAddPlayer } from '../dialog-add-player/dialog-add-player';
+import { GameInfo } from "../game-info/game-info";
 
 
 
@@ -19,15 +20,15 @@ import { DialogAddPlayer } from '../dialog-add-player/dialog-add-player';
   selector: 'app-game',
   
   imports: [
-    CommonModule, 
+    CommonModule,
     Player,
     MatButtonModule,
     MatIconModule,
     FormsModule,
-    
     MatInputModule,
-    MatFormFieldModule
-  ],
+    MatFormFieldModule,
+    GameInfo
+],
   templateUrl: './game.html',
   styleUrl: './game.scss',
 })
@@ -60,8 +61,11 @@ export class Game implements OnInit{
       setTimeout(()=>{
         if(this.currentCard){
           this.game.playedCards.push(this.currentCard);
+          this.pickCardAnimation = true
           console.log('New Card:'+ this.currentCard);
           console.log('Game is',this.game.playedCards)
+          this.game.currentPlayer ++;
+          this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
         }
         this.pickCardAnimation = false;
       },2000)
@@ -71,9 +75,10 @@ export class Game implements OnInit{
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayer);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      if (result !== undefined) {
+    dialogRef.afterClosed().subscribe(name => {
+      console.log('The dialog was closed',name);
+      if(name && name.length > 0){
+        this.game.players.push(name);
       }
     });
   }

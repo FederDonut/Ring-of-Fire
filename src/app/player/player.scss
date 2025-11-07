@@ -12,12 +12,16 @@
         font-size: 32px;
         margin-left: 16px;
     }
-
-    background-color: rgb(217, 151, 70);
+    background-color: rgb(227, 223, 213, 0.8);
+    
     img{
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
         object-fit: cover;
         border-radius: 100%;
     }
+}
+
+.player-active{
+        background-color: rgb(217, 151, 70) !important;
 }
